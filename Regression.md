@@ -1,14 +1,27 @@
 # Starting point
-
 ```python
 # Input
-x = df [['TotalSF']] # pandas DataFrame
+X = df[['TotalSF']] # pandas DataFrame
 # Label
-
+y = df["SalePrice"] # pandas Series
 ```
+
+
 # Models
 ## Linear Regression
-## k-neightbors
+```python
+# Load the library
+from sklearn.linear_model import LinearRegression
+# Create an instance of the model
+reg = LinearRegression()
+# Fit the regressor
+reg.fit(X,y)
+# Do predictions
+reg.predict([[2540],[3500],[4000]])
+```
+
+
+## k-neighbors
 ## Decision Tree
 
 # Metrics
@@ -20,6 +33,6 @@ x = df [['TotalSF']] # pandas DataFrame
 
 # Evaluation
 ## Train Test Split
-## Cros Validation
+## Cross Validation
 ## Grid Search
 ## Randomized Search
